@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Robot_Test">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-16 0 0.0127778759781516"
+        rpy="0 0 0" />
+      <mass
+        value="1.01502616728323" />
+      <inertia
+        ixx="0.00199169500029189"
+        ixy="-8.27963284748999E-07"
+        ixz="2.38157893592389E-18"
+        iyy="0.00128309024140103"
+        iyz="3.02631370336162E-20"
+        izz="0.00270762501832606" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Tip_Pitch_R">
+    <inertial>
+      <origin
+        xyz="7.26667524280356E-05 7.16410264445244E-12 0.0599676329518597"
+        rpy="0 0 0" />
+      <mass
+        value="0.588138632359538" />
+      <inertia
+        ixx="0.000628889034144778"
+        ixy="-1.3926293459223E-07"
+        ixz="6.01392594346271E-08"
+        iyy="0.000508580005596835"
+        iyz="-6.99398789319623E-07"
+        izz="0.000590533605048368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Pitch_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Pitch_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Pitch_R"
+    type="revolute">
+    <origin
+      xyz="0 -0.07610000000001 0"
+      rpy="1.57079632679489 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Tip_Pitch_R" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Tip_Roll_R">
+    <inertial>
+      <origin
+        xyz="0.0313786304226126 -0.00010396532346521 0.0389036272187343"
+        rpy="0 0 0" />
+      <mass
+        value="0.330942372833192" />
+      <inertia
+        ixx="0.000175362379790137"
+        ixy="4.85120300723541E-07"
+        ixz="1.22897229556697E-08"
+        iyy="0.00015737545608147"
+        iyz="-1.8662787654118E-09"
+        izz="0.000164229108181993" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Roll_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Roll_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Roll_R"
+    type="revolute">
+    <origin
+      xyz="0 -0.0388999999999912 0.0699999999999998"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="Link_Tip_Pitch_R" />
+    <child
+      link="Link_Tip_Roll_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Tip_Yaw_R">
+    <inertial>
+      <origin
+        xyz="0.000220549994087438 0.000208565009961026 0.081091941480044"
+        rpy="0 0 0" />
+      <mass
+        value="0.246255723847474" />
+      <inertia
+        ixx="0.000911459330824827"
+        ixy="-5.78607700305177E-21"
+        ixz="-6.3352921638675E-06"
+        iyy="0.000991950074887344"
+        iyz="-1.47831497347633E-20"
+        izz="0.000123172179108965" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Yaw_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Yaw_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Yaw_R"
+    type="revolute">
+    <origin
+      xyz="0.0721000000000094 0 0.0388999999999823"
+      rpy="0 -1.5707963267949 0" />
+    <parent
+      link="Link_Tip_Roll_R" />
+    <child
+      link="Link_Tip_Yaw_R" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Knee_R">
+    <inertial>
+      <origin
+        xyz="-0.000256572140561295 0.160000004497887 0.0249864042327025"
+        rpy="0 0 0" />
+      <mass
+        value="0.232870990924282" />
+      <inertia
+        ixx="0.00153800786441307"
+        ixy="-1.64923074888398E-11"
+        ixz="-1.54093473227749E-13"
+        iyy="7.15958412480534E-05"
+        iyz="-1.67418021329198E-11"
+        izz="0.00152117941730256" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Knee_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Knee_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Knee_R"
+    type="revolute">
+    <origin
+      xyz="0.00012829 0.025 0.256"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Link_Tip_Yaw_R" />
+    <child
+      link="Link_Knee_R" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Foot_R">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-16 0.0673431643549857 0.0300000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="1.04708545595828" />
+      <inertia
+        ixx="0.0015168990537752"
+        ixy="-1.28617525634553E-17"
+        ixz="-8.91687377830931E-19"
+        iyy="0.00504019711146672"
+        iyz="2.96255869600374E-19"
+        izz="0.00522591267555326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Foot_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Foot_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Ankle_R_Pitch"
+    type="revolute">
+    <origin
+      xyz="-0.00025657246191152 0.32 -0.00500000000000009"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Knee_R" />
+    <child
+      link="Foot_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Wheels_R1">
+    <inertial>
+      <origin
+        xyz="-1.66533453693773E-16 0 0.00999999999999995"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="-1.3508031732286E-22"
+        ixz="4.19644068628304E-21"
+        iyy="3.51219388929249E-05"
+        iyz="2.39298310379952E-22"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_R1"
+    type="continuous">
+    <origin
+      xyz="0.12 0.100000000000001 0.0200000000000002"
+      rpy="0 0 0" />
+    <parent
+      link="Foot_R" />
+    <child
+      link="Link_Wheels_R1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_Wheels_R2">
+    <inertial>
+      <origin
+        xyz="-8.32667268468867E-17 -1.11022302462516E-16 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="-1.15710504645589E-22"
+        ixz="3.20261454854662E-21"
+        iyy="3.51219388929249E-05"
+        iyz="-3.43997904551972E-21"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_R2"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="Foot_R" />
+    <child
+      link="Link_Wheels_R2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_Wheels_R3">
+    <inertial>
+      <origin
+        xyz="-1.73472347597681E-16 0 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="-4.29186107409224E-23"
+        ixz="3.86810968220558E-21"
+        iyy="3.51219388929249E-05"
+        iyz="-3.64481238504776E-21"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_R3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_R3"
+    type="continuous">
+    <origin
+      xyz="-0.12 0.1 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="Foot_R" />
+    <child
+      link="Link_Wheels_R3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_Tip_Pitch_L">
+    <inertial>
+      <origin
+        xyz="7.16451897808668E-12 -7.26667524277025E-05 0.0599676329518603"
+        rpy="0 0 0" />
+      <mass
+        value="0.588138632359538" />
+      <inertia
+        ixx="0.000508580005596835"
+        ixy="1.39262934591603E-07"
+        ixz="-6.99398789319665E-07"
+        iyy="0.000628889034144778"
+        iyz="-6.01392594345716E-08"
+        izz="0.000590533605048367" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Pitch_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Pitch_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Pitch_L"
+    type="revolute">
+    <origin
+      xyz="0 0.0761000000000099 0"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Tip_Pitch_L" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Tip_Roll_L">
+    <inertial>
+      <origin
+        xyz="0.0313786304226134 -0.00010396532346485 0.038903627218733"
+        rpy="0 0 0" />
+      <mass
+        value="0.330942372833192" />
+      <inertia
+        ixx="0.000175362379790137"
+        ixy="4.85120300723585E-07"
+        ixz="1.22897229556406E-08"
+        iyy="0.000157375456081469"
+        iyz="-1.86627876541421E-09"
+        izz="0.000164229108181993" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Roll_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Roll_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Roll_L"
+    type="revolute">
+    <origin
+      xyz="-0.0388999999999909 0 0.0700000000000002"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="Link_Tip_Pitch_L" />
+    <child
+      link="Link_Tip_Roll_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Tip_Yaw_L">
+    <inertial>
+      <origin
+        xyz="0.000208565009961137 -0.00022054999408766 0.0810919414800439"
+        rpy="0 0 0" />
+      <mass
+        value="0.246255723847473" />
+      <inertia
+        ixx="0.000991950074887339"
+        ixy="-1.20761173811363E-21"
+        ixz="-3.4033469983611E-20"
+        iyy="0.000911459330824822"
+        iyz="6.33529216386808E-06"
+        izz="0.000123172179108964" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Yaw_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Tip_Yaw_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Tip_Yaw_L"
+    type="revolute">
+    <origin
+      xyz="0.0721000000000103 0 0.038899999999981"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="Link_Tip_Roll_L" />
+    <child
+      link="Link_Tip_Yaw_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Knee_L">
+    <inertial>
+      <origin
+        xyz="-0.00025657214056185 0.159999995502114 0.0250135957672981"
+        rpy="0 0 0" />
+      <mass
+        value="0.232870990924281" />
+      <inertia
+        ixx="0.00153800786441306"
+        ixy="1.64923073247064E-11"
+        ixz="1.54093444921414E-13"
+        iyy="7.15958412480537E-05"
+        iyz="-1.67418021753219E-11"
+        izz="0.00152117941730254" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Knee_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Knee_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Knee_L"
+    type="revolute">
+    <origin
+      xyz="0.0250000000000001 -0.000128286230955676 0.256"
+      rpy="1.5707963267949 0 -1.57079632679489" />
+    <parent
+      link="Link_Tip_Yaw_L" />
+    <child
+      link="Link_Knee_L" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Foot_L">
+    <inertial>
+      <origin
+        xyz="2.4980018054066E-16 0.0673431643549856 0.0299999999999996"
+        rpy="0 0 0" />
+      <mass
+        value="1.04708545595828" />
+      <inertia
+        ixx="0.0015168990537752"
+        ixy="1.30407462926261E-17"
+        ixz="-1.20288554914763E-20"
+        iyy="0.00504019711146673"
+        iyz="4.57254806495585E-19"
+        izz="0.00522591267555326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Foot_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Foot_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Ankle_L_Pitch"
+    type="revolute">
+    <origin
+      xyz="-0.000256572461910992 0.32 -0.00499999999999945"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Knee_L" />
+    <child
+      link="Foot_L" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Wheels_L1">
+    <inertial>
+      <origin
+        xyz="-1.27675647831893E-15 2.22044604925031E-16 0.0100000000000006"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="1.33413893047137E-21"
+        ixz="-7.72963933030929E-20"
+        iyy="3.51219388929249E-05"
+        iyz="-2.66355670182258E-21"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_L1"
+    type="continuous">
+    <origin
+      xyz="-0.12 0.1 0.0399999999999997"
+      rpy="-3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="Foot_L" />
+    <child
+      link="Link_Wheels_L1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_Wheels_L2">
+    <inertial>
+      <origin
+        xyz="-1.2490009027033E-15 0 0.0100000000000003"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="-7.94300183204136E-22"
+        ixz="-7.98865573070038E-20"
+        iyy="3.51219388929249E-05"
+        iyz="-2.39291983116289E-21"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_L2"
+    type="continuous">
+    <origin
+      xyz="0 0.1 0.0399999999999996"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="Foot_L" />
+    <child
+      link="Link_Wheels_L2" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_Wheels_L3">
+    <inertial>
+      <origin
+        xyz="-1.18655085756814E-15 -1.11022302462516E-16 0.00999999999999995"
+        rpy="0 0 0" />
+      <mass
+        value="0.0827436169509835" />
+      <inertia
+        ixx="3.51219388929249E-05"
+        ixy="-4.47022189367286E-22"
+        ixz="-7.25383710436175E-20"
+        iyy="3.51219388929249E-05"
+        iyz="-2.05413267318539E-21"
+        izz="6.53328179479664E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Robot_Test/meshes/Link_Wheels_L3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Wheels_L3"
+    type="continuous">
+    <origin
+      xyz="0.12 0.0999999999999996 0.0399999999999997"
+      rpy="3.14159265358979 0 -3.14159265358979" />
+    <parent
+      link="Foot_L" />
+    <child
+      link="Link_Wheels_L3" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
